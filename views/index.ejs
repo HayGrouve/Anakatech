@@ -1,15 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Currencies</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles/main.css">
 </head>
+
 <body>
-      <p>EURUSD <%= data.rates.USD.toFixed(4) %></p>  
-      <p>EURAUD <%= data.rates.AUD.toFixed(4) %></p>  
-      <p>EURCAD <%= data.rates.CAD.toFixed(4) %></p>  
-      <p>EURBGN <%= data.rates.BGN.toFixed(4) %></p>  
+    <h1>Rates</h1>
+    <div class="container">
+        <table class="table table-dark">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col"><img src="./styles/images/euro.jpg" alt="Europe union flag"> Euro to</th>
+                    <th scope="col">Rates</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td><img src="./styles/images/usd.png" alt="USA flag"> USD</td>
+                    <td><span id="usd"><%= data.rates.USD.toFixed(4) %></span></td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td><img src="./styles/images/aud.svg" alt="Australian flag"> AUD</td>
+                    <td><span id="aud"><%= data.rates.AUD.toFixed(4) %></span></td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td><img src="./styles/images/cad.png" alt="Canadian flag"> CAD</td>
+                    <td><span id="cad"><%= data.rates.CAD.toFixed(4) %></span></td>
+                </tr>
+                <tr>
+                    <th scope="row">4</th>
+                    <td><img src="./styles/images/bgn.svg" alt="Bulgarian flag"> BGN</td>
+                    <td><span id="bgn"><%= data.rates.BGN.toFixed(4) %></span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script src="./scripts/index.js"></script>
 </body>
+
 </html>
-  
